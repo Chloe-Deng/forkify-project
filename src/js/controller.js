@@ -149,6 +149,10 @@ const controlAddRecipe = async function (newRecipe) {
   }
 };
 
+const newFeature = function () {
+  console.log('Welcome to the application');
+};
+
 // Publisher subscriber pattern:
 // When the application started, the init function got called, and then the addHandlerRender was called (which is written in the view class, and then passing controlRecipe as handler)
 const init = function () {
@@ -167,6 +171,7 @@ const init = function () {
 
   // Handle the upload recipe event
   addRecipeView.addHandlerUpload(controlAddRecipe);
+  newFeature();
 };
 init();
 
